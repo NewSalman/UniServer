@@ -16,7 +16,13 @@ class OrderController {
 
 
     @GetMapping("/order")
-    fun Index() : MutableList<Order> = OrderRepo.GetItems()
+    fun Index() : MutableList<Order> {
+        val items = OrderRepo.GetItems()
+
+        items.reverse()
+
+        return items
+    }
 
     @GetMapping("/order/{id}")
     fun GetItem(@PathVariable(value = "id", required = true) id : Int) : Order {
