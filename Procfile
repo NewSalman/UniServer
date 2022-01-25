@@ -1,1 +1,1 @@
-web: java -jar build/libs/kaServer.jar --server.port=$PORT
+web: java -jar build/libs/kaServer-0.0.1.jar --server.port=$PORT
