@@ -19,7 +19,7 @@ class OrderController {
     fun Index() : MutableList<Order> {
         val items = OrderRepo.GetItems()
 
-        items.reverse()
+        items.sortByDescending { it.ID }
 
         return items
     }
